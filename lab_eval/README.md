@@ -83,7 +83,7 @@ In this project I measured both sides of that trade-off on real hardware. I set 
 | Sl. No. | Name | USN / Roll Number |
 |:-:|:--|:--|
 | 1 | Adarsh Walad | 01fe24bci |
-| 2 | Nilaksha Nath | 01fe24bci087 |
+| 2 | Manoj Kamath | 01fe24bci087 |
 | 3 | Bachu venkata siva jaideep | 01fe24bci084 |
 | 4 | Prathamesh Eedigi | 01fe24bci006 |
 
