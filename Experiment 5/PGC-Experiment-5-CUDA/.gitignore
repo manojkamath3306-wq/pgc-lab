@@ -1,0 +1,12 @@
+# Build outputs
+neural_network
+*.o
+*.obj
+*.exe
+*.ptx
+*.cubin
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/

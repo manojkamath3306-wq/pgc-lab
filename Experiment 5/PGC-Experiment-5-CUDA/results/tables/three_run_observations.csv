@@ -1,0 +1,7 @@
+Run,CPU compute (ms),GPU kernel-only (ms),GPU end-to-end (ms)
+1,0.176274,0.02237,0.153011
+2,0.175878,0.020939,0.153347
+3,0.179986,0.019954,0.157614
+Average,0.177379,0.021088,0.154657
+Kernel-only speedup,8.411520x
+End-to-end speedup,1.146918x
