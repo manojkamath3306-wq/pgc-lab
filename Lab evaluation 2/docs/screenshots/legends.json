@@ -1,0 +1,21 @@
+{
+ "01_benchmark_run_baseline_and_colsweep": [
+  "GPU: RTX 5060 Ti, 36 SMs, 32 MB L2, compute capability 12.0. Timing = CUDA events, 3 warm-up runs, average of 30 runs, checked against the CPU on 64 rows",
+  "Baseline sizes: separate vs fused kernels. At 4096x4096, 0.7020 ms vs 0.3641 ms (1.93x). Every line says MATCH",
+  "Row-length sweep, 128 to 8192 columns, five variants. Warp-per-row is fastest on short rows (4096x512: 0.0124 ms vs 0.0268 ms fused); online softmax is fastest at 8192 columns (0.7327 ms vs 0.9704 ms)"
+ ],
+ "02_benchmark_run_blocksweep_and_dram": [
+  "Block-size sweep, 64 to 1024 threads. The fused kernel at 4096x8192 takes 2.8106 ms with 64 threads but 0.7236 ms with 512",
+  "DRAM-bound sizes start (268 MB matrices): at 16384x4096 fused takes 1.4299 ms vs 2.7249 ms for separate (1.91x)"
+ ],
+ "03_benchmark_run_dram_attention_done": [
+  "End of the block-size sweep (4096x8192, 512 and 1024 threads)",
+  "DRAM-bound sizes, three shapes, four to five variants each. Fused reaches 375.5 to 377.8 GB/s, about 84% of the 448 GB/s spec peak. All MATCH",
+  "Attention-score shapes (16 heads, sequence length 128 to 2048). At 32768x2048: fused 1.4299 ms vs separate 2.7273 ms (1.91x)",
+  "Run finished: results written to results/data.csv"
+ ],
+ "04_report_build": [
+  "The four report scripts run in one command: plot.py, make_readme.py, make_ppt.py, package.py",
+  "Output: figures and summary.md, README.md, the PowerPoint and the results zip were all written"
+ ]
+}
